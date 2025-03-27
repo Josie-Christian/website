@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="websiteStylesheet.css">
+</head>
+<body>
+
+<h2>Josie Anne Christian</h2>
+
+<ul class="nav-menu">
+    <li class="nav-item"><a class="nav-link" href="websiteHTML.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+
+
+<div class="parent">
+    <div class="card child inline-block-child">
+        <img src="Thistlesticks.png" class="resize" class="display: inline-block" alt="Avatar" >
+        <div class="container">
+            <h4><b>Thistlesticks</b></h4>
+            <button id="openModal" >More Details</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>For this project, me and my business partner Ben wrote, edited and created a tabletop roleplaying game - Thistlesticks!</p>
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("openModal");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="card child inline-block-child">
+        <img src="Thistlesticks.png" class="resize" class="display: inline-block" alt="Avatar" >
+        <div class="container">
+            <h4><b>Thistlesticks</b></h4>
+            <button id="openModal2" >More Details</button>
+            <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="carousel-container">
+
+                        <div class="carousel-slide fade">
+                            <img src="image1.jpg" alt="Image 1">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <img src="image2.jpg" alt="Image 2">
+                        </div>
+
+                        <div class="carousel-slide fade">
+                            <img src="image3.jpg" alt="Image 3">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="dot-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                    <p>For this project, me and my business partner Ben wrote, edited and created a tabletop roleplaying game - Thistlesticks!</p>
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal2");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("openModal2");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("carousel-slide");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
