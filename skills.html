@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h2>Josie Anne Christian</h2>
+<h1>Josie Anne Christian</h2>
 
 <ul class="nav-menu">
   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -14,6 +14,130 @@
   <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 </ul>
+<h2>Skills</h2>
+
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'Tab1')">JavaScript</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab2')">Python</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab3')">HTML and CSS</button>
+</div>
+
+<div id="Tab1" class="tabcontent" style="display: block;">
+  <h2>JavaScript</h2>
+  <p>I have confidence in my abilities with beginner and intermediate level JavaScript</p>
+  <body>
+
+  <h3>Progress (80%)</h3>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <br>
+  <button onclick="move()">Click Me</button>
+
+  <script>
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 10;
+      var id = setInterval(frame, 100);
+      function frame() {
+        if (width >= 80) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+        }
+      }
+    }
+  </script>
+
+  </body>
+</div>
+
+<div id="Tab2" class="tabcontent">
+  <h2>Python</h2>
+  <p>I have a strong grasp of the mechanics of python, with experience using it to perform basic functions and complete data analytics</p>
+  <body>
+
+  <h3>Progress (90%)</h3>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar2"></div>
+  </div>
+
+  <br>
+  <button onclick="move2()">Click Me</button>
+
+  <script>
+    function move2() {
+      var elem = document.getElementById("myBar2");
+      var width = 10;
+      var id = setInterval(frame, 100);
+      function frame() {
+        if (width >= 90) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+        }
+      }
+    }
+  </script>
+
+  </body>
+</div>
+
+<div id="Tab3" class="tabcontent">
+  <h2>HTML and CSS</h2>
+  <p>I have the abilities to code and design front end applications</p>
+  <body>
+
+  <h3>Progress (60%)</h3>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar3"></div>
+  </div>
+
+  <br>
+  <button onclick="move3()">Click Me</button>
+
+  <script>
+    function move3() {
+      var elem = document.getElementById("myBar3");
+      var width = 10;
+      var id = setInterval(frame, 100);
+      function frame() {
+        if (width >= 60) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+        }
+      }
+    }
+  </script>
+
+  </body>
+
+</div>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
 
 </body>
+
 </html>
